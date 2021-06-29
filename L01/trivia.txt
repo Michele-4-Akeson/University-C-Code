@@ -5,7 +5,7 @@ Grep
 
 2. How many sign boards did you see on your way to Paradise?
 
-2 in the WesternForest
+3 total: 2 in the WesternForest, 1 in the staircase of the cave
 
 3. What is the name of CS and AI research department at MIT?
 StataCenter
