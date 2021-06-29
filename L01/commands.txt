@@ -2,6 +2,7 @@ Commands:
 A list of all commands and their assoicated descriptions
 
 ls - prints a lists of the all contents of current working directory
+less - prints the contents of a file -> cat in actual practice
 cd <directory> - changes the current working directory to the provided directory, directory
 cd .. - changes the current working  directory to the directory which is one level above
 cd ~ - changes working  directory to home directory
