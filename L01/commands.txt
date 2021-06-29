@@ -8,4 +8,5 @@ cd ~ - changes working  directory to home directory
 cd - changes working directory to home directory
 pwd - prints the current working directory to the terminal
 mv <file/directory> <location> - moves a file or directory to another location in the file system
+man <command> - provides reference information on topics, such as commands, subroutines, and files.
  
