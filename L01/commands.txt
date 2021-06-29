@@ -8,5 +8,12 @@ cd ~ - changes working  directory to home directory
 cd - changes working directory to home directory
 pwd - prints the current working directory to the terminal
 mv <file/directory> <location> - moves a file or directory to another location in the file system
-man <command> - provides reference information on topics, such as commands, subroutines, and files.
- 
+man <command> - provides reference information on topics, such as commands (how to use them), subroutines, and files.
+rm <file> - removes/deletes the specified file (can be used on a directory using rm -r <directory>) 
+mkdir <directory> - creates a directory with the provided name
+sudo <command>  - a utility for UNIX- and Linux-based systems that provides an efficient way to give specific users permission to use specific system commands at the root level of the system
+grep <phrase> <item> - searching plain-text data sets for lines that match a the provided phrase
+cp <filename> <new_file_name> - creates a copy of a file with the given filename, and stores the copy with name, new_file_name
+cp <filename> <path> - creates a copy of a file, and stores it in the specified directory path
+touch <file> - creates a new file in the current working directory with name provided
+
