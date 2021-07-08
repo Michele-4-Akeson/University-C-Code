@@ -1,6 +1,0 @@
-[submodule "L03/--force"]
-	path = L03/--force
-	url = https://github.com/Michele-4-Akeson/CS1XC3_L03.git
-[submodule "CS1XC3_L03"]
-	path = CS1XC3_L03
-	url = https://github.com/Michele-4-Akeson/CS1XC3_L03.git
