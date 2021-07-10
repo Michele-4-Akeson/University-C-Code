@@ -1,0 +1,86 @@
+#!/bin/bash
+
+
+excess() {
+    input_list=$@  #returns all arguments
+    if [ -f excess.txt ] ;then
+	rm excess.txt
+    else
+	touch excess.txt
+    fi
+    
+    i=1
+    for input in $input_list ;
+    do
+	if [ $i -gt 3 ] ; then
+	    echo $input >> excess.txt
+	else
+	    i=$(( i + 1 ))
+	fi
+    done
+		
+    
+}
+
+
+default () {
+    # Use First Argument As Working Directory
+    WDIR=$1
+    objective=$2
+    filename=file1.txt
+
+    if [ $# -eq 3 ] ; then
+	filename=$3
+
+    fi
+
+    if [ $objective -eq 1 ] ; then
+	if ! [ -f $filename ] ; then
+	    touch $filename
+            echo  $USER > file1.txt
+	fi
+
+    elif [ $objective -eq 2 ] ; then
+	if  [ -f $filename ] ; then
+	    echo "file exsits"
+	    if ! [ -d backup ] ; then
+		echo "directory does not exsits"
+		mkdir backup
+		cp $filename backup/
+	    else
+		cp  $filename backup/
+	    fi
+	fi
+
+    elif [ $objective -eq 3 ] ; then
+	if [ -d backup ] && [ -f backup/$filename ] ; then
+	    echo "directory and exsits and file is in directory"
+       
+	    cd backup
+	    cp $filename "$WDIR"/
+	    rm $filename
+	fi
+	
+    fi
+
+    
+
+}
+
+
+# Use First Argument As Working Directory
+WDIR=$1
+objective=$2
+filename=file1.txt
+cd "$WDIR"
+
+if [ $# -ge 4 ] ; then
+    excess $@
+else
+    default $@
+
+fi
+
+
+
+echo "Finished"
