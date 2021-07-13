@@ -1,0 +1,11 @@
+1. Why are all the reported times zero?
+
+the factors.c program requires less than 0.00s to execute the script (it still requires time to execute, just below the what is expressed by gprof)
+
+2. Why is factors_itr only called once every time the program is run?
+
+factors_itr is only called within the main function of the factors.c program and solve the problem iteratively - performs iterations, and then calls primeFactors_itr and allFactors_itr which act as helper functions to solve the function iteratively as well. factors_rec calls primeFactors_rec and allFactors_rec which are recursive functions (call themselves multiple times) 
+
+3. Is there a mathemactical relationship between the input number and the recursive calls? What about the number of prime factors each number produces?
+
+primeFactors_rec calls itself equal to (n -1) times, where n is the total number of prime factors an input produces. (To be more specific, primeFactors_rec is called in the program once for every prime factors an input has - for 300, which has prime factors 2, 2, 3, 5, 5. primeFactors is called a total of 5 times in the program, but calls itself a total of 4 times) 

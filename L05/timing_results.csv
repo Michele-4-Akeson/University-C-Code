@@ -1,15 +1,21 @@
-Search Value    ,Linear Search ,Binary Search, Fibonacci Search  ,Notes
-,,,,
-1,         real 0m0.004s, real 0m0.003s, real 0m0.002s,
-4,         real 0m0.002s, real 0m0.002s, real 0m0.002s,
-22,        real 0m0.002s, real 0m0.002s, real 0m0.002s,
-37,        real 0m0.002s, real 0m0.002s, real 0m0.002s,
-22906,     real 0m0.002s, real 0m0.002s, real 0m0.002s,
-53757,     real 0m0.002s, real 0m0.002s, real 0m0.002s,
-112591,    real 0m0.002s, real 0m0.002s, real 0m0.002s,
-361940,    real 0m0.002s, real 0m0.002s, real 0m0.002s,
-475713,    real 0m0.002s, real 0m0.002s, real 0m0.002s,
-893766,    real 0m0.002s, real 0m0.002s, real 0m0.003s,
-996637,    real 0m0.002s, real 0m0.002s, real 0m0.002s,
-996639,    real 0m0.002s, real 0m0.002s, real 0m0.003s,
-996652,    real 0m0.003s, real 0m0.002s, real 0m0.002s,
+Search Value    ,Linear Search ,Binary Search, Fibonacci Search  ,Notes,
+,,,,,
+1,         real 0m0.004s, real 0m0.003s, real 0m0.002s,"(Fibonacci Search) due to its division of the array following the ""golden ratio 1:1.6"", which eliminates more of the array than binary, which divides the list on a 1:1 ratio - linear search presents the slowest as 1 is not in the array, and as such, linear searches the entire list until determining 1 is not an element",
+4,         real 0m0.002s, real 0m0.002s, real 0m0.002s,"(equal real time) - possibly due to time varaibility caused by background processes or rounding. It is expected that linear search produces the fastest real time as 4 is the first element in the array, and as such is the first check made by linear search - linear search is faster than binary search in short arrays",
+22,        real 0m0.002s, real 0m0.002s, real 0m0.002s,"(equal real time) - possibly due to time varaibility caused by background processes or rounding. It is expected that linear search produces the fastest real time as 22 is the second element in the array, and as such, requires 2 checks, where as binary and fibonacci require more",
+37,        real 0m0.002s, real 0m0.002s, real 0m0.002s,"(equal real time) - possibily due to time varaibility caused by background processes or rounding. It is expected that linear search produces the fastest real time as 37 is the fourth element in the array, and as such may requires 4 checks where as binary and fibonacci require more",
+22906,     real 0m0.002s, real 0m0.002s, real 0m0.002s,"(equal real time)  - - possibily due to time varaibility caused by background processes or rounding. It is expected that binary search produces the fastest real time as the it requires at most log2(n) + 1 searches to reach a result, and the element is earlier in the list, requiring more checks for fibonacci search",
+53757,     real 0m0.002s, real 0m0.002s, real 0m0.002s,"(equal real time)  - - possibily due to time varaibility caused by background processes or rounding. It is expected that binary search produces the fastest real time as the it requires at most log2(n) + 1 searches to reach a result, and the element is earlier in the list, requiring more checks for fibonacci search",
+112591,    real 0m0.002s, real 0m0.002s, real 0m0.002s,"(equal real time)  - - possibily due to time varaibility caused by background processes or rounding. It is expected that binary search produces the fastest real time as the it requires at most log2(n) + 1 searches to reach a result, (in this case n=100,000) and the element is earlier in the list, requiring more checks for fibonacci search",
+361940,    real 0m0.002s, real 0m0.002s, real 0m0.002s,"(equal real time)  - - possibily due to time varaibility caused by background processes or rounding. It is expected that binary search produces the fastest real time as the it requires at most log2(n) + 1 searches to reach a result, (in this case n=100,000) and the element is earlier in the list, requiring more checks for fibonacci search",
+475713,    real 0m0.002s, real 0m0.002s, real 0m0.002s,"(equal real time)  - - possibily due to time varaibility caused by background processes or rounding. It is expected that binary search produces the fastest real time as the it requires at most log2(n) + 1 searches to reach a result, (in this case n=100,000) and the element is earlier in the list, requiring more checks for fibonacci search",
+893766,    real 0m0.002s, real 0m0.002s, real 0m0.003s,"(equal real time for linear and binary) - possibly due to time variaibility or rounding  - - I believe that as an array increases in size, the fibonacci search should prsent a faster run time as it starts at the last element of an array and deincrements.  ",
+996637,    real 0m0.002s, real 0m0.002s, real 0m0.002s,"(equal real time for linear and binary) - possibly due to time variaibility or rounding  - - I believe that as an array increases in size, the fibonacci search should prsent a faster run time as it starts at the last element of an array and deincrements.  ",
+996639,    real 0m0.002s, real 0m0.002s, real 0m0.003s,"(equal real time for linear and binary) - possibly due to time variaibility or rounding  - - I believe that as an array increases in size, the fibonacci search should prsent a faster run time as it starts at the last element of an array and deincrements.  ",
+(negative)996652,    real 0m0.003s, real 0m0.002s, real 0m0.002s,"(eqaul real time for binary and fibonacci) linear search presents the slowest as -996652 is not in the array, and as such, linear searches the entire list until determining  it is not an element. Binary and fibonnaci divide and elimate portions of the list reduces the total number of checks, aloowing for faster execution",
+,,,,,General Notes
+,,,,,Time results are variable based on background processes and an average of results is taken in practice
+,,,,,Search Array starts at 4 and is in increasing order
+,,,,,"Linear Search O(n) - searches an array sequentially, comparing each element to the desired element until located (array does not need to be sorted). Faster than binary when used on  short arrays - run time increases linearly with increased array size"
+,,,,,"Binary Search O(logn) - searches array for desired element by calculating the middle of the array, and comparing to desired element. Section of the array that the element can not exsit is elimated, and the process is repeated until element is found - run time increaes logritmeically with array size - doubling the array size increases the number of searches by 1 I think?  -- array must be sorted"
+,,,,,"Fibonacci Search O(logn) - searches array using fibonacci numbers, where the first checked number is the first fibonacci number equal to the length or one fibonacci number lower than the length of the array. The indexed element is compared to the desired element and the section which can not contain the desired element (above or below) is removed - and the next fibonacci number is checked --array must be sorted"
