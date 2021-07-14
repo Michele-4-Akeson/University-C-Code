@@ -1,15 +1,15 @@
         -:    0:Source:factors.c
         -:    0:Graph:factors.gcno
         -:    0:Data:factors.gcda
-        -:    0:Runs:5
+        -:    0:Runs:1
         -:    1:#include <stdio.h>
         -:    2:#include <stdlib.h>
         -:    3:#include <string.h>
         -:    4:#include <stdbool.h>
         -:    5:
         -:    6:// Used by qsort().  
-      745:    7:int cmpfunc (const void * a, const void * b) {
-      745:    8:   return ( *(int*)a - *(int*)b );
+    #####:    7:int cmpfunc (const void * a, const void * b) {
+    #####:    8:   return ( *(int*)a - *(int*)b );
         -:    9:}
         -:   10:
         -:   11:// Prints an array, assuming 0 termination
@@ -31,34 +31,34 @@
     #####:   27:}
         -:   28:
         -:   29:// Prints a 2D array, assuming zero termination
-        5:   30:void printArray2D (int toPrint[100][50]) {
-        5:   31:	if (toPrint[0][0] == 0) {
+        1:   30:void printArray2D (int toPrint[100][50]) {
+        1:   31:	if (toPrint[0][0] == 0) {
     #####:   32:		printf("\n[]");
         -:   33:	} else {
-        5:   34:		printf("\n[ ") ;
+        1:   34:		printf("\n[ ") ;
         -:   35:	}
-       31:   36:	for (int i = 0; toPrint[i][0] != 0; i++) {
-       26:   37:		printf("[") ;
-      119:   38:		for (int j = 0; toPrint[i][j] != 0; j++) {
-       93:   39:			if (toPrint[i][j+1] == 0) {
-       26:   40:				printf("%d]", toPrint[i][j]);
+        3:   36:	for (int i = 0; toPrint[i][0] != 0; i++) {
+        2:   37:		printf("[") ;
+        5:   38:		for (int j = 0; toPrint[i][j] != 0; j++) {
+        3:   39:			if (toPrint[i][j+1] == 0) {
+        2:   40:				printf("%d]", toPrint[i][j]);
         -:   41:			} else {
-       67:   42:				printf("%d, ", toPrint[i][j]);
+        1:   42:				printf("%d, ", toPrint[i][j]);
         -:   43:			}
         -:   44:		}	
-       26:   45:		int prod = 1;
-      119:   46:		for (int j = 0; toPrint[i][j] != 0; j++) {
-       93:   47:			prod *= toPrint[i][j];
+        2:   45:		int prod = 1;
+        5:   46:		for (int j = 0; toPrint[i][j] != 0; j++) {
+        3:   47:			prod *= toPrint[i][j];
         -:   48:		}
         -:   49:	
-       26:   50:		printf(" = %d", prod);
-       26:   51:		if (toPrint[i+1][0] == 0) {
-        5:   52:			printf("\n]");
+        2:   50:		printf(" = %d", prod);
+        2:   51:		if (toPrint[i+1][0] == 0) {
+        1:   52:			printf("\n]");
         -:   53:		} else {
-       21:   54:			printf("\n, ");
+        1:   54:			printf("\n, ");
         -:   55:		}
         -:   56:	} 
-        5:   57:}
+        1:   57:}
         -:   58:
         -:   59:// Computes the prime factors of N using a recursion.
         -:   60:// Stores factors in "factors" array.
@@ -162,121 +162,121 @@
         1:  158:	printf("\n\n");
         1:  159:}
         -:  160:
-        4:  161:void primeFactors_itr (int N, int* factors) {
-        4:  162:	int pos = 0;
-       17:  163:	while (N > 1) {
-       13:  164:		int i = 2;
-       31:  165:		while (N % i != 0) {
-       18:  166:			i += 1; 
+    #####:  161:void primeFactors_itr (int N, int* factors) {
+    #####:  162:	int pos = 0;
+    #####:  163:	while (N > 1) {
+    #####:  164:		int i = 2;
+    #####:  165:		while (N % i != 0) {
+    #####:  166:			i += 1; 
         -:  167:		}
-       13:  168:		factors[pos] = i;
-       13:  169:		factors[pos + 1] = 0;
-       13:  170:		pos += 1;
-       13:  171:		N /= i;
+    #####:  168:		factors[pos] = i;
+    #####:  169:		factors[pos + 1] = 0;
+    #####:  170:		pos += 1;
+    #####:  171:		N /= i;
         -:  172:	}
-        4:  173:}
+    #####:  173:}
         -:  174:
-        4:  175:void allFactors_itr(int primes[50], int all[100][50]) {
+    #####:  175:void allFactors_itr(int primes[50], int all[100][50]) {
         -:  176:	// loop over all elements in "all" (initially 1)
         -:  177:	//   - all will grow dynamically as we add factor groups to it.
-       28:  178:	for (int a = 0; all[a][0] != 0; a++) {
+    #####:  178:	for (int a = 0; all[a][0] != 0; a++) {
         -:  179:
         -:  180:		// If the number of factors in this row is less than 2, skip it!
         -:  181:		int z_out;
-      114:  182:		for (int z = 0; all[a][z] != 0; z++) {
-       90:  183:			z_out = z;
+    #####:  182:		for (int z = 0; all[a][z] != 0; z++) {
+    #####:  183:			z_out = z;
         -:  184:		}
-       24:  185:		if (z_out < 2) {
-        7:  186:			continue;
+    #####:  185:		if (z_out < 2) {
+    #####:  186:			continue;
         -:  187:		}
         -:  188:		
         -:  189:		// for every pair of elements in the current row...
-       94:  190:		for (int i = 0; all[a][i] != 0; i ++) {
-      231:  191:			for (int j = i+1; all[a][j] != 0; j ++) {
+    #####:  190:		for (int i = 0; all[a][i] != 0; i ++) {
+    #####:  191:			for (int j = i+1; all[a][j] != 0; j ++) {
         -:  192:				// set up a temporary buffer to hold our new array of factors.
         -:  193:				int remainingList[50];
-      154:  194:				remainingList[0] = 0;
-      154:  195:				int end = 0;
+    #####:  194:				remainingList[0] = 0;
+    #####:  195:				int end = 0;
         -:  196:				// loop through the current row and append everything that isn't at index i or j
-     1020:  197:				for (int k = 0; all[a][k] != 0; k++) {
-      866:  198:					if ((k != i) && (k != j)) {
-      558:  199:						remainingList[end] = all[a][k];
-      558:  200:						remainingList[end+1] = 0;
-      558:  201:						end ++;
+    #####:  197:				for (int k = 0; all[a][k] != 0; k++) {
+    #####:  198:					if ((k != i) && (k != j)) {
+    #####:  199:						remainingList[end] = all[a][k];
+    #####:  200:						remainingList[end+1] = 0;
+    #####:  201:						end ++;
         -:  202:					}
         -:  203:				}
         -:  204:				// append i * j 
-      154:  205:				remainingList[end] = all[a][i] * all[a][j];
-      154:  206:				remainingList[end+1] = 0;
-      154:  207:				end ++;
+    #####:  205:				remainingList[end] = all[a][i] * all[a][j];
+    #####:  206:				remainingList[end+1] = 0;
+    #####:  207:				end ++;
         -:  208:				// Sort! That! Array!
-      154:  209:				qsort(remainingList, end, sizeof(int), cmpfunc);
+    #####:  209:				qsort(remainingList, end, sizeof(int), cmpfunc);
         -:  210:				
         -:  211:				// Check if the array is already in "all"
-      154:  212:				bool check1 = false;
-     1554:  213:				for (int b = 0; all[b][0] != 0 ; b ++ ) {
-     1400:  214:					bool check2 = true;
-     6448:  215:					for (int c = 0; remainingList[c] != 0; c ++ ) {
-     5048:  216:						check2 = check2 && (remainingList[c] == all[b][c]);
+    #####:  212:				bool check1 = false;
+    #####:  213:				for (int b = 0; all[b][0] != 0 ; b ++ ) {
+    #####:  214:					bool check2 = true;
+    #####:  215:					for (int c = 0; remainingList[c] != 0; c ++ ) {
+    #####:  216:						check2 = check2 && (remainingList[c] == all[b][c]);
         -:  217:					}
-     1400:  218:					check1 = check1 || check2;
+    #####:  218:					check1 = check1 || check2;
         -:  219:				}
         -:  220:				
-      154:  221:				if (!check1) {
+    #####:  221:				if (!check1) {
         -:  222:					// if not... 
-       20:  223:					int q = 0;
-      230:  224:					while (all[q][0] != 0) {
-      210:  225:						q ++;
+    #####:  223:					int q = 0;
+    #####:  224:					while (all[q][0] != 0) {
+    #####:  225:						q ++;
         -:  226:					}
         -:  227:					// copy it in! 
-       20:  228:					memcpy(all[q], remainingList, 50*sizeof(int));
-       20:  229:					all[q+1][0] = 0;
+    #####:  228:					memcpy(all[q], remainingList, 50*sizeof(int));
+    #####:  229:					all[q+1][0] = 0;
         -:  230:				}
         -:  231:			}
         -:  232:		}
         -:  233:	}
-        4:  234:}
+    #####:  234:}
         -:  235:
-        4:  236:void factor_itr(int d) {
+    #####:  236:void factor_itr(int d) {
         -:  237:	
         -:  238:	int primefactors_itr[50];
-        4:  239:	primeFactors_itr(d, primefactors_itr);
+    #####:  239:	primeFactors_itr(d, primefactors_itr);
         -:  240:	int allfactors_itr[100][50];
-      404:  241:	for (int i = 0; i < 100; i++) {
-    20400:  242:		for (int j = 0; j < 50; j++) {
-    20000:  243:			allfactors_itr[i][j] = 0;
+    #####:  241:	for (int i = 0; i < 100; i++) {
+    #####:  242:		for (int j = 0; j < 50; j++) {
+    #####:  243:			allfactors_itr[i][j] = 0;
         -:  244:		}
         -:  245:	}
         -:  246:
-        4:  247:    memcpy(allfactors_itr[0], primefactors_itr, 10*sizeof(int));
-        4:  248:    allfactors_itr[1][0] = 0;
-        4:  249:	allFactors_itr(primefactors_itr, allfactors_itr);
+    #####:  247:    memcpy(allfactors_itr[0], primefactors_itr, 10*sizeof(int));
+    #####:  248:    allfactors_itr[1][0] = 0;
+    #####:  249:	allFactors_itr(primefactors_itr, allfactors_itr);
         -:  250:
-        4:  251:	printf("The prime factors of %d are ", d);
-       17:  252:	for (int i = 0; primefactors_itr[i] != 0; i++) {
-       13:  253:		printf("%d, ", primefactors_itr[i]);
+    #####:  251:	printf("The prime factors of %d are ", d);
+    #####:  252:	for (int i = 0; primefactors_itr[i] != 0; i++) {
+    #####:  253:		printf("%d, ", primefactors_itr[i]);
         -:  254:	}
-        4:  255:	printf("\n\nAll groups of factors are:");
-        4:  256:	printArray2D(allfactors_itr);
+    #####:  255:	printf("\n\nAll groups of factors are:");
+    #####:  256:	printArray2D(allfactors_itr);
         -:  257:	
-        4:  258:	printf("\n\n");
-        4:  259:}
+    #####:  258:	printf("\n\n");
+    #####:  259:}
         -:  260:
-        5:  261:int main(int argc, char *argv[]){
-        5:  262:	if (argc < 3){
+        1:  261:int main(int argc, char *argv[]){
+        1:  262:	if (argc < 3){
     #####:  263:		return 0;
         -:  264:	}
-        5:  265:	int d = atoi(argv[2]);
+        1:  265:	int d = atoi(argv[2]);
         -:  266:
-        5:  267:	switch (atoi(argv[1])){
+        1:  267:	switch (atoi(argv[1])){
         1:  268:		case 0:
         1:  269:			printf("Running Recursive Factors \n");
         1:  270:			factor_rec(d);
         1:  271:			return (0);
-        4:  272:		case 1:
-        4:  273:			printf("Running Iterative Factors \n");
-        4:  274:			factor_itr(d);
-        4:  275:			return (0);
+    #####:  272:		case 1:
+    #####:  273:			printf("Running Iterative Factors \n");
+    #####:  274:			factor_itr(d);
+    #####:  275:			return (0);
     #####:  276:		default:
     #####:  277:			return (0);
         -:  278:	}

@@ -1,0 +1,20 @@
+1. How are the iterative and recursive algorithms similar and different for the same test cases? Which has more repetition?
+
+The iterative and recursive algorithms are similar in that that each use "void printArray2D()" equally on the same test case, and are different both in the funtion calls (iterative call each of its functions once, while recursive calls recursive functions). Addtionally, while both algorithems use "int cmpfunc()", the recursive algorithem call this function more.
+
+The recursive algorithem has more repetition
+
+
+2. What is the most executed line in the iterative and recursive algorithms? Are they the same?
+
+Iterative: Line 242 is executed the most   Recursive: Line 144 is the executed the most
+Each line is executed an equal number of times
+
+3. Are there any parts of the code which are not exercised?
+
+void printArray() is not exercised
+
+4. If we were to try and optimize either function, where would be a good place to start?
+
+If we wanted to optimize either algorithm, we could use gcc -O factors.c which would rearrange our code to be optimized. A likely place to start would be to examine the most executed lines and try to reduce the number of needed calls
+
