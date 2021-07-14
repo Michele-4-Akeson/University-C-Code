@@ -8,4 +8,8 @@ factors_itr is only called within the main function of the factors.c program and
 
 3. Is there a mathemactical relationship between the input number and the recursive calls? What about the number of prime factors each number produces?
 
-primeFactors_rec calls itself equal to (n -1) times, where n is the total number of prime factors an input produces. (To be more specific, primeFactors_rec is called in the program once for every prime factors an input has - for 300, which has prime factors 2, 2, 3, 5, 5. primeFactors is called a total of 5 times in the program, but calls itself a total of 4 times) 
+It does not appear as though a relationship exsits between input number and the recursive calls
+
+primeFactors_rec calls itself equal to (n -1) times, where n is the total number of prime factors an input produces. (To be more specific, primeFactors_rec is
+called in the program once for every prime factors an input has - for 300, which has prime factors 2, 2, 3, 5, 5. primeFactors is called a total of 5 times
+in the program, but calls itself a total of 4 times) 

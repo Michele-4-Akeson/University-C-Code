@@ -1,14 +1,24 @@
 1. How are the iterative and recursive algorithms similar and different for the same test cases? Which has more repetition?
 
-The iterative and recursive algorithms are similar in that that each use "void printArray2D()" equally on the same test case, and are different both in the funtion calls (iterative call each of its functions once, while recursive calls recursive functions). Addtionally, while both algorithems use "int cmpfunc()", the recursive algorithem call this function more.
+The iterative and recursive algorithms are similar in the following:
+Both algorithms use "void printArray2D()" equally, and rely on a while loop and the use of the modulo (%) operation to determine prime factors
+Addtionally, both algorithms use the "int cmpfunc()" (however, the recursive algorithm call this function more)
+
+The iterative and recursive algorithms are different in the following:
+The iterative algorithm call each of its function once, and relies on iteration/looping to determine prime factors
+and store them, while the recursive algorithm calls recursive functions which rely on recursive (calling themselves) to solve the problem
 
 The recursive algorithem has more repetition
 
 
 2. What is the most executed line in the iterative and recursive algorithms? Are they the same?
 
-Iterative: Line 242 is executed the most   Recursive: Line 144 is the executed the most
-Each line is executed an equal number of times
+Recursive Top Executed Lines: Case 4: Line 144, Case 10: Line 144 Case 17: 144 Case 256: Line 107
+Iterative Top Executed Lines: Case 4: Line 242, Case 10: Line 242 Case 17: 242 Case 256: Line 215
+
+- test case 256 expresses that line 107 and line 215 have the max execution in a single program execution, although overall line 144 and line 242 are executed most
+- No the most executed line is not the same line in the program
+
 
 3. Are there any parts of the code which are not exercised?
 
