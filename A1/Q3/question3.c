@@ -132,7 +132,7 @@ int main() {
 
   int a[] = {1, 2, 2, 2, 3, 3, 4, 2, 4, 5, 6, 6};
   int b[] = {0, 1, 3, 4, 4, 5, 1, 2, 1, 4, 0, 3};
-  int c[] = {1};
+  int c[] = {1, 2};
   int d[] = {};
 
   int al = sizeof(a) / sizeof(a[0]);
@@ -141,7 +141,7 @@ int main() {
 
   removeDups(a, al);
   removeDups(b, bl);
-  removeDups(c, 1);
+  removeDups(c, 2);
   removeDups(d, 0);
 
   return 0;

@@ -184,6 +184,30 @@ int main () {
     out = pop(&start, &stop);
     printf("popped %ld\n", out);
     printStack(&start, &stop);
+
+
+    printStack(&start, &stop);
+    push(&start, &stop, 1L);
+    printStack(&start, &stop);
+    push(&start, &stop, 2L);
+     printStack(&start, &stop);
+    
+
+    out = pop(&start, &stop);
+    printf("popped %ld\n", out);
+    printStack(&start, &stop);
+    
+    out = pop(&start, &stop);
+    printf("popped %ld\n", out);
+    printStack(&start, &stop);
+    
+    out = pop(&start, &stop);
+    printf("popped %ld\n", out);
+    printStack(&start, &stop);
+    
+    out = pop(&start, &stop);
+    printf("popped %ld\n", out);
+    printStack(&start, &stop);
     
 
     /**** EXPECTED OUTPUT
