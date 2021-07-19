@@ -1,0 +1,47 @@
+#!/bin/bash
+
+
+    
+ 
+
+
+code_cover() {
+    numbers="4 10 17 256"
+    for num in $numbers;
+    do
+	if [ $1 -eq 0 ] ; then
+	    filename_1="factors_0_$num.gcov"
+	else
+	    filename_1="factors_1_$num.gcov"
+	fi
+	
+	
+	echo $filename_1
+	if [ -f $filename_1 ] ; then
+	    rm $filename_1
+	    rm "$filename_1.gcov"
+	fi
+
+	 gcc -fprofile-arcs -ftest-coverage -o factors factors.c
+	 ./factors_0 $1 $num
+	 gcov factors.c
+	 
+	 mv factors.c.gcov  "$filename_1"
+	 rm factors.gcno
+
+	 git add $filename_1
+
+
+
+    done
+
+}  
+
+code_cover $1
+
+	
+
+
+
+
+    
