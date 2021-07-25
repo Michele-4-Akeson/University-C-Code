@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+
+int main() {
+  int array[] = {1, 2, 3};
+  bool x = true;
+  
+  if (array[0] == 1) {
+    x++;
+  } else if (array[0] == 1) {
+    int n = array[3]/0;
+  }
+
+
+  return 0;
+}
