@@ -13,3 +13,6 @@
 [submodule "L08/github-actions-for-ci"]
 	path = L08/github-actions-for-ci
 	url = https://github.com/Michele-4-Akeson/github-actions-for-ci.git
+[submodule "L08/CS1XC3_L08_P3"]
+	path = L08/CS1XC3_L08_P3
+	url = https://github.com/Michele-4-Akeson/CS1XC3_L08_P3.git
