@@ -7,3 +7,9 @@
 [submodule "L07/1XC3_L07"]
 	path = L07/1XC3_L07
 	url = https://github.com/Michele-4-Akeson/1XC3_L07.git
+[submodule "L08/hello-github-actions"]
+	path = L08/hello-github-actions
+	url = https://github.com/Michele-4-Akeson/hello-github-actions.git
+[submodule "L08/github-actions-for-ci"]
+	path = L08/github-actions-for-ci
+	url = https://github.com/Michele-4-Akeson/github-actions-for-ci.git
