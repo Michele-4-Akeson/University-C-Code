@@ -1,0 +1,3 @@
+In the list of links, the fourth link has a cheat sheet. What is the 8th markdown element in the first table?
+
+Horizontal Rule
