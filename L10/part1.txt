@@ -1,0 +1,24 @@
+abc(de|defg|)
+(abc|define "|var g = )\d\d\d("|;|xyz)
+...\.
+[cmf]an
+[^b]og
+[^a-c][n-p][a-c]
+waz{3,5}up
+a+b*c+
+\d\d? files? found\?
+\d\.\s+abc
+^Mission: successful
+^(file.*).pdf
+(.{3}\s(\d+))
+(\d+)x(\d+)
+I love (cats|dogs)
+.{44}( \w+\.0\W or above.| \W+|)
+^[\d-].*\d$
+([\d]{3})
+([\w\.]*)
+<([\w]*)
+^(.*).(png|jpg|gif)$
+([^\s].*)
+List.(.*)\((.*):(.*)\)
+(\w*)://([\w-\.]*)[:/](\d*)
