@@ -147,7 +147,7 @@ void DMY_MonthDY(char *buffer, const char *str) {
     calendar_name = "January";
     printf("\n%s is real\n", calendar_name);  
   } else if (equal(month, "02")) {
-    calendar_name = "Febuary";
+    calendar_name = "February";
     printf("\n%s is real\n", calendar_name);  
   } else if (equal(month, "03")) {
     calendar_name = "March";
@@ -222,9 +222,9 @@ char format2[12][19] = { "January    1, 1970" // First Day of History (according
     
     printf ("-- DD\\MM\\YY to Month DD, YYYY\n");
     for (int i = 0; i < 12; i++) {
-      // printf("%s\n", format1[i]);
-      // DMY_MonthDY(buffer2[i], format1[i]);
-      //printf("-> \"%s\"\n", buffer2[i]);
+      printf("%s\n", format1[i]);
+      DMY_MonthDY(buffer2[i], format1[i]);
+      printf("-> \"%s\"\n", buffer2[i]);
     }
     
     
