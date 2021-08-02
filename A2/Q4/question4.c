@@ -17,6 +17,11 @@ typedef struct node {
 
 
 struct node *element(struct node *dll, int i)  {
+
+  if (dll == NULL) {
+    return NULL;
+  }
+  
   int index = 0;
   struct node* current_node = dll;
   struct node* next_node = dll->next;
@@ -175,6 +180,14 @@ int main () {
     dll = delete(dll, 0);
     dll = delete(dll, 0);
     dll = delete(dll, 0);
+
+    printLL(dll);
+    dll = delete(dll, 0);
+    dll = delete(dll, 0);
+    dll = delete(dll, 0);
+    dll = delete(dll, 0);
+
+        printLL(dll);
     
     
 
