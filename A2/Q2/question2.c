@@ -94,7 +94,7 @@ void MonthDY_DMY(char *buffer, const char *str) {
      monthval = 9;
    } else if (equal(month, "October")) {
      monthval = 10;
-   } else if (equal(month, "Novemebr")) {
+   } else if (equal(month, "November")) {
      monthval = 11;
    } else if (equal(month, "December")) {
      monthval = 12;
