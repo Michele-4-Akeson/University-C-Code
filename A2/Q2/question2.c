@@ -76,7 +76,7 @@ void MonthDY_DMY(char *buffer, const char *str) {
 
    if (equal(month, "January")){
      monthval = 1;
-   } else if (equal(month, "Febuary")) {
+   } else if (equal(month, "February")) {
      monthval = 2;
    } else if (equal(month, "March")) {
      monthval = 3;
