@@ -82,6 +82,12 @@ struct node *add(struct node *dll, int i, int value){
   Node* list_end = dll;
   Node* insert_node = malloc(sizeof(struct node));
 
+  if (dll == NULL) {
+    // list is empty
+    insert_node->value = value;
+    return insert_node;
+  }
+  
   //printf("INDEX: %d  NODE ADDRESS OF INDEX %p\n", i, node_address);
   // APPEND TO END
   if (node_address == NULL) {
@@ -187,7 +193,14 @@ int main () {
     dll = delete(dll, 0);
     dll = delete(dll, 0);
 
-        printLL(dll);
+    printLL(dll);
+
+      
+    dll = add(dll, -1, 3);
+    printLL(dll);
+    dll = add(dll, -1, 4);
+    printLL(dll);
+    dll = add(dll, 1, 2);
     
     
 
