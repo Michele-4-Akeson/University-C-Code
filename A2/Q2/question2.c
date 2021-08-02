@@ -141,48 +141,48 @@ void DMY_MonthDY(char *buffer, const char *str) {
   int day_number = strtol(day, &endptr, 10);
   int year_number = strtol(year, &endptr, 10);
   char *calendar_name;
-  printf("Day %d  Month %s  Year %d\n", day_number, month, year_number);
+  //printf("Day %d  Month %s  Year %d\n", day_number, month, year_number);
   
   if (equal(month, "01")){
     calendar_name = "January";
-    printf("\n%s is real\n", calendar_name);  
+    //printf("\n%s is real\n", calendar_name);  
   } else if (equal(month, "02")) {
     calendar_name = "February";
-    printf("\n%s is real\n", calendar_name);  
+    //printf("\n%s is real\n", calendar_name);  
   } else if (equal(month, "03")) {
     calendar_name = "March";
-    printf("\n%s is real\n", calendar_name);  
+    //printf("\n%s is real\n", calendar_name);  
   } else if (equal(month, "04")) {
     calendar_name = "April";
-    printf("\n%s is real\n", calendar_name);  
+    //printf("\n%s is real\n", calendar_name);  
   } else if (equal(month, "05")) {
     calendar_name = "May";
-    printf("\n%s is real\n", calendar_name);  
+    //printf("\n%s is real\n", calendar_name);  
   } else if (equal(month, "06")) {
     calendar_name = "June";
-    printf("\n%s is real\n", calendar_name);  
+    //printf("\n%s is real\n", calendar_name);  
   } else if (equal(month, "07")) {
     calendar_name = "July";
-    printf("\n%s is real\n", calendar_name);  
+    //printf("\n%s is real\n", calendar_name);  
   } else if (equal(month, "08")) {
     calendar_name = "August";
-    printf("\n%s is real\n", calendar_name);  
+    //printf("\n%s is real\n", calendar_name);  
   } else if (equal(month, "09")) {
     calendar_name = "September";
-    printf("\n%s is real\n", calendar_name);  
+    //printf("\n%s is real\n", calendar_name);  
   } else if (equal(month, "10")) {
     calendar_name = "October";
-    printf("\n%s is real\n", calendar_name);  
+    //printf("\n%s is real\n", calendar_name);  
   } else if (equal(month, "11")) {
     calendar_name = "November";
-    printf("\n%s is real\n", calendar_name);
+    //printf("\n%s is real\n", calendar_name);
   } else if (equal(month, "12")) {
     calendar_name = "December";
-    printf("\n%s is real\n", calendar_name);  
+    //printf("\n%s is real\n", calendar_name);  
   }
 
 
-  snprintf(buffer, 19, "%-9s %2d, %d", calendar_name, day_number, year_number);
+  snprintf(buffer, 19, "%-9s %2d, %4d", calendar_name, day_number, year_number);
 
 
 }
