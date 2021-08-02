@@ -154,9 +154,8 @@ float fkgrade(char str[]){
   int syllables = syllable_count(str, length);
   float grade_level = 0;
 
-  if (sentences == 0 && words != 0) {
-    sentences = 1;
-  } else if (sentences == 1 && words == 0) {
+  
+  if (sentences == 0 || words == 0) {
     grade_level = 0;
   } else {
     grade_level = 0.39 * (words/sentences) + 11.8*(syllables/words) - 15.59;
@@ -174,7 +173,11 @@ int main() {
     char aurelius[] = "Nothing pertains to human beings except what defines us as human.  No other things can be demanded of us.  They aren't proper to human nature, nor is it incomplete without them.  It follows that they are not our goal, or what helps us reach it -- the good.  If any of them were proper to us, it would be improper to disdain or resist it.  If the things themselves were good, it could hardly be good to give them up.  But in reality, the more we deny ourselves such things (and things like them) -- or are deprived of them involuntarily, even -- the better we become.";
 
     char descartes[] = "I suppose, accordingly, that all the things which I see are false (fictitious); I believe that none of those objects which my fallacious memory represents ever existed; I suppose that I possess no senses; I believe that body, figure, extension, motion, and place are merely fictions of my mind.  What is there, then, that can be esteemed true?  Perhaps this only, that there is absolutely nothing certain.";
-    
+
+
+    char zero[] = "";
+    char word1[] = "thy";
+    char word2[] = "hi";
     printf("Plato...\nexpected sentences = 2\n  expected words = 94\n  expected syllables = 135\n");
 
     printf("Sentence Count: %d,  Word Count: %d   Syllable Count:  %d\n", sentence_count(plato, strlen(plato)), word_count(plato, strlen(plato)), syllable_count(plato, strlen(plato)));
@@ -192,4 +195,14 @@ int main() {
 
     out = fkgrade(descartes);
     printf("> Reading Level = %f\n", out);
+
+
+    out = fkgrade(zero);
+    printf("> zero Reading Level = %f\n", out);
+
+    out = fkgrade(word1);
+    printf("> word1 Reading Level = %f\n", out);
+
+    out = fkgrade(word2);
+    printf("> word2 Reading Level = %f\n", out);
 }
