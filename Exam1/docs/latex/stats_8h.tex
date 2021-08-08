@@ -1,0 +1,56 @@
+\hypertarget{stats_8h}{}\doxysection{src/stats.h File Reference}
+\label{stats_8h}\index{src/stats.h@{src/stats.h}}
+
+
+\mbox{\hyperlink{stats_8h}{stats.\+h}} is a header file containing prototypes to be used in the stats.\+c script, doxycomments, as well as the statblock and player structs\+:  
+
+
+{\ttfamily \#include \char`\"{}inventory.\+c\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structstatblock}{statblock}}
+\item 
+struct \mbox{\hyperlink{structplayer}{player}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{stats_8h_a4f371b834281996fdeda7cfab18c8589}\label{stats_8h_a4f371b834281996fdeda7cfab18c8589}} 
+typedef struct \mbox{\hyperlink{structstatblock}{statblock}} {\bfseries Statblock}
+\item 
+\mbox{\Hypertarget{stats_8h_aacfbfbd6ace468c21c5128fced4e632c}\label{stats_8h_aacfbfbd6ace468c21c5128fced4e632c}} 
+typedef struct \mbox{\hyperlink{structplayer}{player}} {\bfseries Player}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{stats_8h_aad2c2112e6ed854121b139703bdd9a23}\label{stats_8h_aad2c2112e6ed854121b139703bdd9a23}} 
+void {\bfseries display\+Stats} (\mbox{\hyperlink{structplayer}{Player}} $\ast$tux)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{stats_8h_a6fc6a74c4c5f39e1035f9f4bbed5667e}\label{stats_8h_a6fc6a74c4c5f39e1035f9f4bbed5667e}} 
+struct \mbox{\hyperlink{structstatblock}{statblock}} {\bfseries goblin\+\_\+init} = \{\char`\"{}goblin\char`\"{}, 20, 20, 20, 8, 6\}
+\item 
+\mbox{\Hypertarget{stats_8h_a7821200a49a74999a74dfba363b02ee3}\label{stats_8h_a7821200a49a74999a74dfba363b02ee3}} 
+struct \mbox{\hyperlink{structstatblock}{statblock}} {\bfseries orc\+\_\+init} = \{\char`\"{}orc\char`\"{}, 50, 50, 50, 15, 8\}
+\item 
+\mbox{\Hypertarget{stats_8h_a0eb480acb8593880ba14da510525619c}\label{stats_8h_a0eb480acb8593880ba14da510525619c}} 
+struct \mbox{\hyperlink{structstatblock}{statblock}} {\bfseries dragon\+\_\+init} = \{\char`\"{}dragon\char`\"{}, 250, 250, 250, 35, 28\}
+\item 
+\mbox{\Hypertarget{stats_8h_a4f2cd0b1e2b3aaa5d71ab461403651c5}\label{stats_8h_a4f2cd0b1e2b3aaa5d71ab461403651c5}} 
+struct \mbox{\hyperlink{structplayer}{player}} {\bfseries player\+\_\+init} = \{1, 50, N\+U\+LL, \{\char`\"{}Tux\char`\"{}, 25, 25, 0, 10, 5\}\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{stats_8h}{stats.\+h}} is a header file containing prototypes to be used in the stats.\+c script, doxycomments, as well as the statblock and player structs\+: 
+
+\begin{DoxyAuthor}{Author}
+Michele Akeson 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+August 08th, 2021 statblock is a struct which provides the basic stats of a character such as their N\+A\+ME, M\+A\+X\+\_\+\+HP, HP, XP, A\+TK, and D\+EF player is a struct which provides player data on Tux, such as the level, amount of gold, inventory, and stats (via a statblock struct) struct which contains fields describing a the stats of a character in the, such as name, code, 
+\end{DoxyDate}

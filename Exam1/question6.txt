@@ -1,0 +1,7 @@
+1. During the execution of fullAdventure, how many times was the displayImage function
+   called by the displayStats function?
+
+   8
+
+2. In total, how many times was displayInventory called recursively?
+   151
